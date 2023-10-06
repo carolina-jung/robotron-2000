@@ -38,17 +38,65 @@ main {
 }
 
 .robo {
-    height: 110%;
+    height: 100%;
     z-index: 1;
     position: absolute;
     left: -20%;
-    top: -5%;
+    top: 10%;
+}
+
+.alterar {
+    margin: 2px;
+    width: 200px;
+    border: 3px solid var(--main-branco);
+    background: var(--main-cinza);
+    clip-path: polygon(100% 0, 100% calc(100% - 50%), calc(100% - 7%) 100%, 0 100%, 0 0);
+}
+
+.alterar-azul:hover {
+    background: blue;
+    color: var(--main-preto);
+}
+
+.alterar-amarelo:hover {
+    background: yellow;
+    color: var(--main-preto);
+}
+
+.alterar-branco:hover {
+    background: white;
+    color: var(--main-preto);
+    
+}
+
+.alterar-preto:hover {
+    background: black;
+    color: var(--main-branco);
+}
+
+.alterar-rosa:hover {
+    background: palevioletred;
+    color: var(--main-preto);
+    
+}
+
+.alterar-vermelho:hover {
+    background: red;
+    color: var(--main-preto);
+}
+
+.botoes {
+   position: relative;
+   right: 5%;
+   bottom: 10%;
+   display: flex;
+   flex-direction: column;
 }
 
 .titulo {
     transform: rotate(180deg);
     font-weight: 500;
-    font-size: 130px;
+    font-size: 100px;
     position: absolute;
     bottom: 7rem;
     left: -3rem;
@@ -63,6 +111,23 @@ main {
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
     height: 80%;
+}
+
+.cor {
+    margin-top: 1em;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 0.2em 1em;
+    float: right;
+    border: 3px solid var(--main-branco);
+    background: var(--main-branco);
+    clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
+    cursor: pointer;
+}
+
+.cor:hover {
+    background: var(--main-preto);
+    color: var(--main-branco)
 }
 
 /****************************** Equipamentos *****/
@@ -148,8 +213,6 @@ main {
     color: var(--main-branco)
 }
 
-
-
 /****************************** Estatísticas *****/
 .estatisticas {
     flex-basis: 23%;
@@ -222,7 +285,7 @@ main {
 
 @media screen and (max-width: 1200px) {
     body { 
-        font-size: 13px;
+        font-size: 12px;
     }
 
     main {
