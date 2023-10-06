@@ -1,5 +1,7 @@
 const controle = document.querySelectorAll("[data-controle]");
 const estatistica = document.querySelectorAll("[data-estatistica]");
+const cor = document.querySelectorAll("[data-cor]");
+const imagem = document.querySelector("[data-imagem]");
 
 const pecas = {
     "bracos": {
@@ -35,6 +37,12 @@ const pecas = {
     }
 }
 
+// cor.forEach ((elemento) => {
+//     elemento.addEventListener("click", (evento) => {
+//         alterarCor();
+//     })
+// })
+
 controle.forEach ( (elemento) => {
      elemento.addEventListener("click", (evento) => {
         manipulaDados(evento.target.dataset.controle, evento.target.parentNode);
@@ -68,3 +76,7 @@ function atualizaEstatistica(operacao, peca) {
         
     })
 }
+
+function trocaImagem(cor){
+    document.querySelector(".robo").src="img/robotron_" + cor + ".png";
+ }
